@@ -1,0 +1,11 @@
+<navbar title="入学"></navbar>
+<searchbar />
+<view class="container">
+  <card title="必备物品" desc="包含报到所需的材料、生活物品及衣物等" bgColor="#3390b9" bindtap="detail"></card>
+  <card title="三卡指南" desc="校园卡、水卡及洗澡卡"  bgColor="#3390b9" bindtap="detail"></card>
+  <card title="银行卡攻略" desc="校发银行卡的用处及必备的先期操作"  bgColor="#4fabd2" bindtap="detail"></card>
+  <card title="可购物品指南" desc="可以在学校内购买到的必需品"  bgColor="#4fabd2" bindtap="detail"></card>
+  <card title="户口迁移" desc="迁入流程、所需材料等"  bgColor="#80c5e4" bindtap="detail"></card>
+  <card title="网上报到及缴费" desc="申请流程、所需材料等"  bgColor="#80c5e4" bindtap="detail"></card>
+</view>
+<image class="footer" src="../../images/footer/token.png" />

@@ -1,0 +1,5 @@
+<view class="statusBar" style="height: {{statusBarHeight}}px"></view>
+<view class="navBar" style="height: {{navBarHeight}}px; background-color: {{bgColor}}; color: {{color}}">
+  <image wx:if="{{showBack}}" class="back" src="../../images/icon/back.svg" bindtap="back" />
+  <view>{{title}}</view>
+</view>

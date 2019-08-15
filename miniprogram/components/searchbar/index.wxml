@@ -1,0 +1,4 @@
+<view class="searchBar">
+  <input class="searchBar-input" confirm-type="search" />
+  <image class="searchBar-button" src="../../images/icon/search.svg" />
+</view>

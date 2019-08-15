@@ -1,0 +1,21 @@
+page {
+  background-image: linear-gradient(#eaeaea 1px, transparent 0), linear-gradient(90deg, #eaeaea 1px, transparent 0);
+  background-size: 36rpx 36rpx;
+  position: relative;
+  height: 100%;
+  font-family: '方正大标宋', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+card {
+  width: calc(50% - 24rpx);
+  margin: 24rpx 0;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  width: calc(100% - 100rpx);
+  left: 50rpx;
+  height: 240rpx;
+}
