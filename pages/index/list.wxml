@@ -8,4 +8,4 @@
   <card title="户口迁移" desc="迁入流程、所需材料等"  bgColor="#80c5e4" bindtap="detail"></card>
   <card title="网上报到及缴费" desc="申请流程、所需材料等"  bgColor="#80c5e4" bindtap="detail"></card>
 </view>
-<image class="footer" src="../../images/footer/token.png" />
+<image class="footer" src="../../images/footer/token.png" bindtap="about" />

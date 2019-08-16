@@ -7,7 +7,10 @@ Page({
   },
   detail() {
     wx.navigateTo({
-      url: '/pages/index/list'
+      url: '/pages/index/detail'
     });
+  },
+  about() {
+    app.about();
   }
-})
+});

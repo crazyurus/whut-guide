@@ -10,4 +10,4 @@
   <card title="饮食" bgColor="#8cceed" bindtap="detail"></card>
   <card title="武理服务" bgColor="#8cceed" bindtap="detail"></card>
 </view>
-<image class="footer" src="../../images/footer/token.png" />
+<image class="footer" src="../../images/footer/token.png" bindtap="about" />

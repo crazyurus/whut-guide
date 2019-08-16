@@ -1,28 +1,27 @@
 {
-	"miniprogramRoot": "miniprogram/",
-	"cloudfunctionRoot": "cloudfunctions/",
+	"projectid": "1109701341_%E6%96%B0%E7%94%9F%E6%89%8B%E5%86%8C",
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"coverView": true,
-		"autoAudits": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		}
+		"autoAudits": false
 	},
-	"appid": "wx6e47fc71914f0254",
-	"projectname": "xubsg1",
-	"libVersion": "2.2.5",
+	"compileType": "miniprogram",
+	"createTime": 1565966901542,
+	"accessTime": 1565966901542,
+	"packOptions": {
+		"ignore": []
+	},
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"qqappid": "1109701341",
+	"projectname": "guide-test",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"appid": "wx6e47fc71914f0254",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -32,22 +31,13 @@
 			"current": -1,
 			"list": []
 		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
 		"game": {
+			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
-			"list": [
-				{
-					"id": -1,
-					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide"
-				}
-			]
+			"current": -1,
+			"list": []
 		}
 	}
 }
