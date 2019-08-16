@@ -5,7 +5,7 @@ Component({
     title: String,
     color: {
       type: String,
-      value: '#3e3636'
+      value: '#000'
     },
     bgColor: {
       type: String,

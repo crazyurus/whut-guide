@@ -2,15 +2,19 @@
   "pages": [
     "pages/index/index",
     "pages/index/list",
-    "pages/index/detail"
+    "pages/index/detail",
+    "pages/common/webview"
   ],
   "window": {
     "backgroundColor": "#ffffff",
+    "navigationBarBackgroundColor": "#ffffff",
     "backgroundTextStyle": "light",
     "navigationBarTitleText": "新生手册",
-    "navigationBarTextStyle": "black",
-    "navigationStyle": "custom"
+    "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
-  "navigateToMiniProgramAppIdList": ["wxebadf544ddae62cb"]
+  "navigateToMiniProgramAppIdList": [
+    "wxebadf544ddae62cb"
+  ],
+  "pageOrientation": "auto"
 }

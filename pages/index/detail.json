@@ -3,5 +3,6 @@
   "usingComponents": {
     "navbar": "../../components/navbar/index",
     "searchbar": "../../components/searchbar/index"
-  }
+  },
+  "navigationStyle": "custom"
 }

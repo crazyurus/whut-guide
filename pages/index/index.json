@@ -4,5 +4,6 @@
     "navbar": "../../components/navbar/index",
     "card": "../../components/card/index",
     "searchbar": "../../components/searchbar/index"
-  }
+  },
+  "navigationStyle": "custom"
 }

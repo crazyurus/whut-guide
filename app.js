@@ -13,7 +13,7 @@ App({
       title: '新生手册',
       content: 'Token团队出品\n产品：曹峻玮\n设计：一期一祈\n开发：廖星',
       showCancel: false,
-      confirmColor: '#3e3636'
+      confirmColor: '#000'
     });
   }
 })
