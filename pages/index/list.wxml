@@ -1,4 +1,4 @@
-<navbar title="入学"></navbar>
+<navbar title="{{title}}"></navbar>
 <searchbar />
 <view class="container">
   <card

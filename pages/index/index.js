@@ -13,7 +13,7 @@ Page({
     const query = e.target.dataset;
 
     wx.navigateTo({
-      url: `/pages/index/list?id=${query.id}&color=${query.color}`
+      url: `/pages/index/list?id=${query.id}&color=${query.color}&title=${query.title}`
     });
   },
   about() {

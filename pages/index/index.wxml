@@ -8,6 +8,7 @@
     bgColor="{{item.color}}"
     bindtap="detail" 
     data-id="{{item.id}}"
+    data-title="{{item.title}}"
     data-color="{{item.color}}"
   ></card>
 </view>
