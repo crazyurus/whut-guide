@@ -5,9 +5,11 @@ Page({
   onLoad() {
     app.loadFontFace();
   },
-  detail() {
+  detail(e) {
+    const id = e.target.dataset.id;
+
     wx.navigateTo({
-      url: '/pages/index/list'
+      url: '/pages/index/list?id=' + id
     });
   },
   about() {
