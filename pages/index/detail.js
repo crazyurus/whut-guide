@@ -7,7 +7,7 @@ Page({
   },
   onLoad(options) {
     app.loadFontFace();
-    app.request.get('https://www.easy-mock.com/mock/5d57960889a50f63cfe141ba/guide/api/v1/article/' + options.id).then(response => {
+    app.request.get('https://test-api-iwut.wutnews.net/api/v1/article?id=' + options.id).then(response => {
       this.setData({
         article: response
       });
