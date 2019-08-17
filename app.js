@@ -28,7 +28,7 @@ App({
           ) {
             resolve(response.data.data);
           } else {
-            self.toast(response.statusCode === 200 ? response.statusCode + ' ' + response.errMsg : response.data.msg);
+            self.toast(response.statusCode === 200 ? response.data.msg : response.statusCode + ' ' + response.errMsg);
             reject(response);
           }
         },
