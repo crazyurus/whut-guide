@@ -3,7 +3,10 @@ const systemInfo = wx.getSystemInfoSync();
 
 Page({
   data: {
-    article: {}
+    article: {
+      title: '加载中',
+      content: '内容正在加载中，请稍等'
+    }
   },
   onLoad(options) {
     app.loadFontFace();

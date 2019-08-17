@@ -9,6 +9,9 @@ Page({
   onLoad() {
     app.loadFontFace();
   },
+  onShareAppMessage() {
+    return {};
+  },
   detail(e) {
     const query = e.target.dataset;
 
