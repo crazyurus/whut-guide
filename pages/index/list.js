@@ -4,7 +4,7 @@ Page({
   data: {
     articles: [],
     title: '',
-    color: '#3390b9'
+    color: ''
   },
   onLoad(options) {
     app.loadFontFace();
@@ -14,6 +14,10 @@ Page({
         title: options.title,
         color: options.color
       });
+    });
+
+    this.setData({
+      title: options.title
     });
   },
   detail(e) {
