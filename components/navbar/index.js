@@ -27,7 +27,7 @@ Component({
   },
   methods: {
     back() {
-      wx.navigateBack();
+      if (this.data.showBack) wx.navigateBack();
     }
   }
 });
