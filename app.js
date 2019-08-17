@@ -10,8 +10,15 @@ App({
   },
   fetch(options) {
     const self = this;
-
+    const { loading = true, ...restOptions } = options;
+    
     return new Promise((resolve, reject) => {
+      if (loading) {
+        wx.showLoading({
+          title: loading === true ? '加载中' : loading
+        });
+      }
+
       wx.request({
         success(response) {
           if (
@@ -26,7 +33,10 @@ App({
           }
         },
         fail: reject,
-        ...options
+        complete() {
+          if (loading) wx.hideLoading();
+        },
+        ...restOptions
       });
     });
   },

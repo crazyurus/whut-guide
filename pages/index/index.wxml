@@ -1,13 +1,14 @@
 <navbar title="新生手册"></navbar>
 <searchbar />
 <view class="container">
-  <card title="网上报到及缴费" bgColor="#3390b9" bindtap="detail" data-id="1"></card>
-  <card title="入学" bgColor="#3390b9" bindtap="detail" data-id="1"></card>
-  <card title="宿舍" bgColor="#4fabd2" bindtap="detail" data-id="1"></card>
-  <card title="社团" bgColor="#4fabd2" bindtap="detail" data-id="1"></card>
-  <card title="学习" bgColor="#80c5e4" bindtap="detail" data-id="1"></card>
-  <card title="军训" bgColor="#80c5e4" bindtap="detail" data-id="1"></card>
-  <card title="饮食" bgColor="#8cceed" bindtap="detail" data-id="1"></card>
-  <card title="武理服务" bgColor="#8cceed" bindtap="detail" data-id="1"></card>
+  <card
+    wx:for="{{categories}}"
+    wx:key="{{item.id}}"
+    title="{{item.title}}"
+    bgColor="{{item.color}}"
+    bindtap="detail" 
+    data-id="{{item.id}}"
+    data-color="{{item.color}}"
+  ></card>
 </view>
 <image class="footer" src="../../images/footer/token.png" bindtap="about" />
