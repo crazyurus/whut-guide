@@ -1,5 +1,5 @@
 <navbar title="新生手册"></navbar>
-<searchbar />
+<searchbar bindsearch="search" />
 <view class="container">
   <card
     wx:for="{{categories}}"

@@ -19,6 +19,11 @@ Page({
       url: `/pages/index/list?id=${query.id}&color=${query.color}&title=${query.title}`
     });
   },
+  search(e) {
+    wx.navigateTo({
+      url: '/pages/index/search?wd=' + e.detail.value
+    });
+  },
   about() {
     app.about();
   }

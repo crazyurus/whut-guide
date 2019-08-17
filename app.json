@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/index/list",
     "pages/index/detail",
-    "pages/common/webview"
+    "pages/common/webview",
+    "pages/index/search"
   ],
   "window": {
     "backgroundColor": "#ffffff",

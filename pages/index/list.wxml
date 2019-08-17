@@ -1,5 +1,5 @@
 <navbar title="{{title}}"></navbar>
-<searchbar />
+<searchbar bindsearch="search" />
 <view class="container">
   <card
     wx:for="{{articles}}"

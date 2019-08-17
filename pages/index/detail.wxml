@@ -1,6 +1,8 @@
 <navbar title="{{article.title}}"></navbar>
 <view class="article">
   <view class="title">{{article.title}}</view>
-  <scroll-view class="content" scroll-y="true">{{article.content}}</scroll-view>
+  <scroll-view class="content" scroll-y="true">
+    <text selectable>{{article.content}}</text>
+  </scroll-view>
 </view>
 <image class="footer" src="../../images/footer/feima.png" bindtap="feedback" />

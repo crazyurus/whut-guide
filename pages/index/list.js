@@ -23,6 +23,11 @@ Page({
       url: '/pages/index/detail?id=' + id
     });
   },
+  search(e) {
+    wx.navigateTo({
+      url: '/pages/index/search?wd=' + e.detail.value
+    });
+  },
   about() {
     app.about();
   }
