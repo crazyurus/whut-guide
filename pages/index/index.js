@@ -13,10 +13,10 @@ Page({
     return {};
   },
   detail(e) {
-    const query = e.target.dataset;
+    const { id, color, title } = e.target.dataset;
 
     wx.navigateTo({
-      url: `/pages/index/list?id=${query.id}&color=${query.color}&title=${query.title}`
+      url: `/pages/index/list?id=${id}&color=${color}&title=${title}`
     });
   },
   search(e) {

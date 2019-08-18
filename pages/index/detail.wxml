@@ -3,6 +3,17 @@
   <view class="title">{{article.title}}</view>
   <scroll-view class="content" scroll-y="true">
     <rich-text nodes="{{article.content}}" selectable></rich-text>
+    <view wx:if="{{article.attachments.length > 0}}">
+      <view>附件：</view>
+      <view 
+        wx:for="{{article.attachments}}"
+        wx:key="{{item.name}}"
+        data-url="{{item.url}}" 
+        bindtap="preview"
+      >
+        {{item.name}}
+      </view>
+    </view>
   </scroll-view>
 </view>
 <image class="footer" src="../../images/footer/feima.png" bindtap="feedback" />

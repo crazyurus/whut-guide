@@ -33,5 +33,24 @@ Page({
         path: '/pages/survey/index?sid=1439943&hash=f9db'
       });
     }
+  },
+  preview(e) {
+    const { url } = e.target.dataset;
+
+    wx.showLoading({
+      title: '下载附件'
+    });
+    wx.downloadFile({
+      url,
+      success(response) {
+        const filePath = response.tempFilePath
+        wx.openDocument({
+          filePath,
+          complete() {
+            wx.hideLoading();
+          }
+        });
+      }
+    });
   }
 });

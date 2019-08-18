@@ -21,7 +21,7 @@ Page({
     });
   },
   detail(e) {
-    const id = e.target.dataset.id;
+    const { id } = e.target.dataset;
 
     wx.navigateTo({
       url: '/pages/index/detail?id=' + id
