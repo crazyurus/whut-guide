@@ -12,7 +12,7 @@
   justify-content: center;
   height: 13vh;
   text-align: center;
-  padding: 0 38rpx;
+  padding: 0 27rpx;
 }
 
 .card-desc {
