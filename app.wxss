@@ -12,8 +12,13 @@ page {
 }
 
 card {
+  display: inline-block;
   width: calc(50% - 24rpx);
   margin: 24rpx 0;
+}
+
+card:nth-child(2n) {
+  margin-left: 48rpx;
 }
 
 .footer {
