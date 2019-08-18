@@ -14,6 +14,18 @@
         {{item.name}}
       </view>
     </view>
+    <view wx:if="{{article.miniPrograms.length > 0}}">
+      <view>相关小程序：</view>
+      <view 
+        wx:for="{{article.miniPrograms}}"
+        wx:key="{{item.name}}"
+        data-appid="{{item.appId}}" 
+        data-path="{{item.path}}"
+        bindtap="launch"
+      >
+        {{item.name}}
+      </view>
+    </view>
   </scroll-view>
 </view>
 <image class="footer" src="../../images/footer/feima.png" bindtap="feedback" />

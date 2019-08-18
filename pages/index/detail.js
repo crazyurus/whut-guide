@@ -23,14 +23,14 @@ Page({
   },
   feedback() {
     if (systemInfo.AppPlatform === 'qq') {
-      const wj = 'https://wj.qq.com/';
+      const wj = ' https://wj.qq.com/s2/4309434/95ba';
       wx.navigateTo({
         url: '/pages/common/webview?url=' + encodeURIComponent(wj)
       });
     } else {
       wx.navigateToMiniProgram({
         appId: 'wxebadf544ddae62cb',
-        path: '/pages/survey/index?sid=1439943&hash=f9db'
+        path: '/pages/survey/index?sid=4309434&hash=95ba'
       });
     }
   },
@@ -51,6 +51,14 @@ Page({
           }
         });
       }
+    });
+  },
+  launch(e) {
+    const { appid, path } = e.target.dataset;
+
+    wx.navigateToMiniProgram({
+      appId: appid,
+      path
     });
   }
 });
