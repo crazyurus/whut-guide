@@ -11,12 +11,20 @@
   align-items: center;
   justify-content: center;
   height: 13vh;
+  text-align: center;
+  padding: 0 38rpx;
 }
 
 .card-desc {
   flex-direction: column;
   padding: 36rpx 20rpx;
   height: 12vh;
+}
+
+.card-desc > .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .desc {
