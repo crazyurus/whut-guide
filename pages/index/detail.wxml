@@ -2,7 +2,7 @@
 <view class="article">
   <view class="title">{{article.title}}</view>
   <scroll-view class="content" scroll-y="true">
-    <text selectable>{{article.content}}</text>
+    <rich-text nodes="{{article.content}}" selectable></rich-text>
   </scroll-view>
 </view>
 <image class="footer" src="../../images/footer/feima.png" bindtap="feedback" />
