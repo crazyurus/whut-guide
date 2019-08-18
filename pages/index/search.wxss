@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  height: calc(100% - 250rpx);
+  height: calc(100% - 210rpx);
   align-content: flex-start;
   overflow-y: auto;
   width: auto;
