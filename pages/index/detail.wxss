@@ -4,7 +4,7 @@
   background-color: #7fc5e3;
   color: #fff;
   margin: 20rpx 38rpx;
-  height: calc(100% - 440rpx);
+  height: calc(100% - 430rpx);
 }
 
 .title {
