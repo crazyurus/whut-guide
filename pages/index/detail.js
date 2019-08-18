@@ -41,7 +41,7 @@ Page({
     const { url } = e.target.dataset;
 
     wx.showLoading({
-      title: '下载附件'
+      title: '下载附件中'
     });
     wx.downloadFile({
       url,
