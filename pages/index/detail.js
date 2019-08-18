@@ -11,6 +11,9 @@ Page({
   onLoad(options) {
     app.loadFontFace();
     app.request.get('https://test-api-iwut.wutnews.net/api/v1/article?id=' + options.id).then(response => {
+      if (systemInfo.AppPlatform === 'qq') response.miniPrograms = response.miniPrograms.qq;
+      else response.miniPrograms = response.miniPrograms.wechat;
+
       this.setData({
         article: response
       });
