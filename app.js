@@ -15,7 +15,8 @@ App({
     return new Promise((resolve, reject) => {
       if (loading) {
         wx.showLoading({
-          title: loading === true ? '加载中' : loading
+          title: loading === true ? '加载中' : loading,
+          mask: true
         });
       }
 
@@ -44,19 +45,19 @@ App({
     const self = this;
 
     return {
-      get(url, header = {}) {
+      get(url, options) {
         return self.fetch({
           method: 'GET',
           url,
-          header
+          ...options
         });
       },
-      post(url, data, header = {}) {
+      post(url, data, options) {
         return self.fetch({
           method: 'POST',
           url,
           data,
-          header
+          ...options
         });
       }
     };
