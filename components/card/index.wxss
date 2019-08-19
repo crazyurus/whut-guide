@@ -7,7 +7,7 @@
   display: flex;
 }
 
-.card:active {
+.card-hover {
   opacity: 0.8;
 }
 
