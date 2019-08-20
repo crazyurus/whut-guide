@@ -6,6 +6,7 @@
     <view wx:if="{{article.attachments.length > 0}}">
       <view>附件：</view>
       <view 
+        class="link"
         wx:for="{{article.attachments}}"
         wx:key="{{item.name}}"
         data-url="{{item.url}}" 
@@ -17,6 +18,7 @@
     <view wx:if="{{article.miniPrograms.length > 0}}">
       <view>相关小程序：</view>
       <view 
+        class="link"
         wx:for="{{article.miniPrograms}}"
         wx:key="{{item.name}}"
         data-appid="{{item.appId}}" 
