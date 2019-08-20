@@ -70,8 +70,8 @@ App({
   },
   about() {
     wx.showModal({
-      title: '新生手册',
-      content: 'Token团队出品\n产品：曹峻玮\n设计：一期一祈\n开发：廖星 李劲巍',
+      title: '理工大指北',
+      content: 'Token团队出品\n产品：曹峻玮\n设计：许亚婷\n开发：廖星 李劲巍',
       showCancel: false,
       confirmColor: '#000'
     });

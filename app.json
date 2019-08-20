@@ -10,7 +10,7 @@
     "backgroundColor": "#ffffff",
     "navigationBarBackgroundColor": "#ffffff",
     "backgroundTextStyle": "light",
-    "navigationBarTitleText": "新生手册",
+    "navigationBarTitleText": "理工大指北",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",

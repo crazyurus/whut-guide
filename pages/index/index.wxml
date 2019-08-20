@@ -1,4 +1,4 @@
-<navbar title="新生手册"></navbar>
+<navbar title="理工大指北"></navbar>
 <searchbar bindsearch="search" />
 <view class="container">
   <card
