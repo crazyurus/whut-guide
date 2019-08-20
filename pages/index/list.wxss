@@ -1,7 +1,12 @@
 .container {
   margin: 20rpx 40rpx;
   height: calc(100% - 480rpx);
-  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  align-content: flex-start;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 

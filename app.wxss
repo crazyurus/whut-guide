@@ -17,10 +17,6 @@ card {
   margin: 24rpx 0;
 }
 
-card:nth-child(2n) {
-  margin-left: 48rpx;
-}
-
 .footer {
   position: absolute;
   bottom: 0;

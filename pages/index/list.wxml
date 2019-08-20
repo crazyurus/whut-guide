@@ -1,6 +1,6 @@
 <navbar title="{{title}}"></navbar>
 <searchbar bindsearch="search" />
-<scroll-view class="container" scroll-y="true">
+<view class="container">
   <card
     wx:for="{{articles}}"
     wx:key="{{item.id}}"
@@ -11,5 +11,5 @@
     bindtap="detail"
   ></card>
   <view wx:if="{{articles.length === 0 && color}}" class="empty">暂时没有内容呢</view>
-</scroll-view>
+</view>
 <image class="footer" src="../../images/footer/token.png" bindtap="about" />

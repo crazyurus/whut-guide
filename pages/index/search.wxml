@@ -1,6 +1,6 @@
 <navbar title="搜索结果"></navbar>
 <searchbar defaultValue="{{wd}}" bindsearch="search" />
-<scroll-view class="container" scroll-y="true">
+<view class="container">
   <card
     wx:for="{{articles}}"
     wx:key="{{item.id}}"
@@ -11,4 +11,4 @@
     bindtap="detail"
   ></card>
   <view wx:if="{{articles.length === 0 && wd}}" class="empty">没找到呢，试试其它关键词</view>
-</scroll-view>
+</view>
