@@ -32,12 +32,13 @@
 
 .share[plain] {
   position: absolute;
-  top: 66%;
+  top: 67%;
   right: 0;
   border: none;
   color: #fff;
-  background-color: rgba(89, 151, 198, 0.8);
+  background-color: rgba(89, 151, 198, 0.7);
   font-size: 16px;
-  border-radius: 20px 0 0 20px;
-  padding: 0 10px 0 16px;
+  border-radius: 16px 0 0 16px;
+  padding: 0 8px 0 16px;
+  line-height: 2;
 }
