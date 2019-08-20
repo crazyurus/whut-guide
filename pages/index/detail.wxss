@@ -1,7 +1,7 @@
 .article {
   border: 2px dashed #000;
   border-radius: 28rpx;
-  background-color: #7fc5e3;
+  background-color: #6eb5d4;
   color: #fff;
   margin: 20rpx 38rpx;
   height: calc(100% - 430rpx);
