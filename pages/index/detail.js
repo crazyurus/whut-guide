@@ -21,7 +21,8 @@ Page({
   },
   onShareAppMessage() {
     return {
-      title: this.data.article.title
+      title: this.data.article.title,
+      path: '/pages/index/detail?id=' + this.data.article.id
     };
   },
   feedback() {
