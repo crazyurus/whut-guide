@@ -2,6 +2,7 @@
 <view class="article">
   <view class="title">{{article.title}}</view>
   <scroll-view class="content" scroll-y="true">
+    <view class="blank"></view>
     <rich-text nodes="{{article.content}}" selectable></rich-text>
     <view wx:if="{{article.attachments.length > 0}}">
       <view>附件：</view>

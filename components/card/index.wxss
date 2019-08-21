@@ -21,8 +21,8 @@
 
 .card-desc {
   flex-direction: column;
-  padding: 36rpx 20rpx;
-  height: 12vh;
+  padding: 36rpx 20rpx 0;
+  height: 180rpx;
 }
 
 .card-desc > .title {
