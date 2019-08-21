@@ -1,7 +1,7 @@
 <navbar title="{{article.title}}"></navbar>
 <view class="article">
   <view class="title">{{article.title}}</view>
-  <scroll-view class="content" scroll-y="true">
+  <scroll-view class="content" scroll-y="true" bindscroll="scroll">
     <view class="blank"></view>
     <rich-text nodes="{{article.content}}" selectable></rich-text>
     <view wx:if="{{article.attachments.length > 0}}">
@@ -30,6 +30,6 @@
       </view>
     </view>
   </scroll-view>
-  <button class="share" open-type="share" plain="true">分享</button>
 </view>
 <image class="footer" src="../../images/footer/feima.png" bindtap="feedback" />
+<button class="share {{showShare ? '' : 'share-hidden'}}" open-type="share" plain="true">点这儿去分享~</button>

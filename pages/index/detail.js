@@ -6,7 +6,8 @@ Page({
     article: {
       title: '加载中',
       content: '内容正在加载中，请稍等'
-    }
+    },
+    showShare: true
   },
   onLoad(options) {
     app.loadFontFace();
@@ -63,6 +64,13 @@ Page({
     wx.navigateToMiniProgram({
       appId: appid,
       path
+    });
+  },
+  scroll(e) {
+    const { scrollTop } = e.detail;
+
+    this.setData({
+      showShare: scrollTop < 20
     });
   }
 });
