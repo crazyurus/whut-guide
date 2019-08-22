@@ -21,11 +21,17 @@ Page({
     });
   },
   detail(e) {
-    const { id } = e.target.dataset;
+    const { id, link } = e.target.dataset;
 
-    wx.navigateTo({
-      url: '/pages/index/detail?id=' + id
-    });
+    if (link) {
+      wx.navigateTo({
+        url: '/pages/common/webview?url=' + encodeURIComponent(link)
+      });
+    } else {
+      wx.navigateTo({
+        url: '/pages/index/detail?id=' + id
+      });
+    }
   },
   search(e) {
     wx.navigateTo({

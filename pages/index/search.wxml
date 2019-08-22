@@ -5,6 +5,7 @@
     wx:for="{{articles}}"
     wx:key="{{item.id}}"
     data-id="{{item.id}}"
+    data-link="{{item.link}}"
     title="{{item.title}}" 
     desc="{{item.description}}" 
     bgColor="{{color}}" 
