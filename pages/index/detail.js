@@ -72,5 +72,15 @@ Page({
     this.setData({
       showShare: scrollTop < 20
     });
+  },
+  location(e) {
+    const { name, area, longitude, latitude } = e.target.dataset;
+
+    wx.openLocation({
+      name,
+      address: area,
+      latitude,
+      longitude,
+    });
   }
 });

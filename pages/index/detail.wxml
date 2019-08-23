@@ -4,6 +4,21 @@
   <scroll-view class="content" scroll-y="true" bindscroll="scroll">
     <view class="blank"></view>
     <rich-text nodes="{{article.content}}" selectable></rich-text>
+    <view wx:if="{{article.positions.length > 0}}">
+      <view>相关地点：</view>
+      <view 
+        class="link"
+        wx:for="{{article.positions}}"
+        wx:key="{{item.name}}"
+        data-name="{{item.name}}"
+        data-area="{{item.area}}"
+        data-latitude="{{item.latitude}}"
+        data-longitude="{{item.longitude}}"
+        bindtap="location"
+      >
+        {{item.name}}
+      </view>
+    </view>
     <view wx:if="{{article.attachments.length > 0}}">
       <view>附件：</view>
       <view 
