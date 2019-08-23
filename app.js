@@ -1,5 +1,3 @@
-const systemInfo = wx.getSystemInfoSync();
-
 App({
   onLaunch() {
     this.globalData = {};
@@ -7,7 +5,7 @@ App({
   loadFontFace() {
     wx.loadFontFace({
       family: '方正大标宋',
-      source: systemInfo.system.includes('Android') ? 'url(https://freshman-static-itoken-team-public-hk-01.oss-cn-hongkong.aliyuncs.com/fonts/FZCUJINLJW.woff2)' : 'url(https://746f-token-student-guide-1300026820.tcb.qcloud.la/assets/fonts/FZCUJINLJW.woff2?sign=1f341cae3293e68bebe86e292b9ec3b7)'
+      source: 'url(https://freshman-static-itoken-team-public-hk-01.oss-cn-hongkong.aliyuncs.com/fonts/FZCUJINLJW.woff2)'
     });
   },
   fetch(options) {
