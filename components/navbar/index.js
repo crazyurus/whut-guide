@@ -1,4 +1,5 @@
 const systemInfo = wx.getSystemInfoSync();
+const menuButton = wx.getMenuButtonBoundingClientRect();
 
 Component({
   properties: {
@@ -14,7 +15,7 @@ Component({
   },
   data: {
     statusBarHeight: systemInfo.statusBarHeight,
-    navBarHeight: systemInfo.system.includes('Android') ? 48 : 44,
+    navBarHeight: menuButton.height + (menuButton.top - systemInfo.statusBarHeight) * 2,
     system: systemInfo.system,
     showBack: false
   },
