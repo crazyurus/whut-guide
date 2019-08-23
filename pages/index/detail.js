@@ -76,11 +76,17 @@ Page({
   location(e) {
     const { name, area, longitude, latitude } = e.target.dataset;
 
-    wx.openLocation({
-      name,
-      address: area,
-      latitude,
-      longitude,
-    });
+   if (systemInfo.AppPlatform === 'qq') {
+     wx.navigateTo({
+       url: '/pages/common/webview?url=' + encodeURIComponent(`https://3gimg.qq.com/lightmap/v1/marker/index.html?marker=coord%3A${latitude}%2C${longitude}%3Btitle%3A${encodeURIComponent(name)}%3Baddr%3A${encodeURIComponent(area)}`),
+     });
+   } else {
+     wx.openLocation({
+       name,
+       address: area,
+       latitude,
+       longitude,
+     });
+   }
   }
 });
