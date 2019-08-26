@@ -25,15 +25,6 @@ Page({
   },
   detail(e) {
     const { id, link } = e.target.dataset;
-
-    if (link) {
-      wx.navigateTo({
-        url: '/pages/common/webview?url=' + encodeURIComponent(link)
-      });
-    } else {
-      wx.navigateTo({
-        url: '/pages/index/detail?id=' + id
-      });
-    }
-  }
+    app.open(id, link);
+  },
 });

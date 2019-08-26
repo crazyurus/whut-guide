@@ -1,0 +1,7 @@
+{
+  "disableScroll": true,
+  "usingComponents": {
+    "navbar": "../../components/navbar/index"
+  },
+  "navigationStyle": "custom"
+}

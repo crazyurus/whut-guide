@@ -10,16 +10,19 @@ App({
       });
     }
   },
+  loading(title) {
+    wx.showLoading({
+      title,
+      mask: true
+    });
+  },
   fetch(options) {
     const self = this;
     const { loading = true, ...restOptions } = options;
     
     return new Promise((resolve, reject) => {
       if (loading) {
-        wx.showLoading({
-          title: loading === true ? '加载中' : loading,
-          mask: true
-        });
+        self.loading(loading === true ? '加载中' : loading);
       }
 
       wx.request({
@@ -77,5 +80,28 @@ App({
       showCancel: false,
       confirmColor: '#000'
     });
+  },
+  open(id, link) {
+    if (link) {
+      if (link === 'https://web.wutnews.net/act/calendar/index.html') {
+        wx.navigateTo({
+          url: '/pages/common/calendar'
+        });
+      }
+      else if (link.indexOf('http') === 0) {
+        wx.navigateTo({
+          url: '/pages/common/webview?url=' + encodeURIComponent(link)
+        });
+      } 
+      else {
+        wx.navigateTo({
+          url: link
+        });
+      }
+    } else {
+      wx.navigateTo({
+        url: '/pages/index/detail?id=' + id
+      });
+    }
   }
 })

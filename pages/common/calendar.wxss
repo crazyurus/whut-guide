@@ -1,0 +1,28 @@
+.container {
+  margin: 24rpx 40rpx;
+}
+
+.calendar {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 73.54%;
+  border-radius: 28rpx;
+  box-shadow: 0 0 16rpx #666;
+  background-color: #efeff4;
+  border: 2px dashed #000;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 28rpx;
+}
+
+.save {
+  top: 60% !important;
+}

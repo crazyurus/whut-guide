@@ -4,7 +4,8 @@
     "pages/index/list",
     "pages/index/detail",
     "pages/common/webview",
-    "pages/index/search"
+    "pages/index/search",
+    "pages/common/calendar"
   ],
   "window": {
     "backgroundColor": "#ffffff",
@@ -15,6 +16,9 @@
   },
   "sitemapLocation": "sitemap.json",
   "navigateToMiniProgramAppIdList": [
-    "wxebadf544ddae62cb", "wx2887b96a44dd3198", "wx21545de6d74f4b0b", "1109559705"
+    "wxebadf544ddae62cb",
+    "wx2887b96a44dd3198",
+    "wx21545de6d74f4b0b",
+    "1109559705"
   ]
 }
