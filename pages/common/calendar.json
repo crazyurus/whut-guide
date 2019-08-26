@@ -1,5 +1,6 @@
 {
   "disableScroll": true,
+  "navigationBarTitleText": "校历",
   "usingComponents": {
     "navbar": "../../components/navbar/index"
   },

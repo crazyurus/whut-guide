@@ -1,7 +1,6 @@
 const app = getApp();
 const url = 'https://web.wutnews.net/act/calendar/assets/images/calendar.jpg';
 
-
 Page({
   data: {},
   onLoad(options) {
@@ -52,5 +51,8 @@ Page({
         });
       }
     });
+  },
+  feedback() {
+    app.feedback();
   }
 });

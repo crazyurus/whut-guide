@@ -27,17 +27,7 @@ Page({
     };
   },
   feedback() {
-    if (systemInfo.AppPlatform === 'qq') {
-      const wj = 'https://wj.qq.com/s2/4309434/95ba';
-      wx.navigateTo({
-        url: '/pages/common/webview?url=' + encodeURIComponent(wj)
-      });
-    } else {
-      wx.navigateToMiniProgram({
-        appId: 'wxebadf544ddae62cb',
-        path: '/pages/survey/index?sid=4309434&hash=95ba'
-      });
-    }
+    app.feedback();
   },
   preview(e) {
     const { url } = e.target.dataset;
