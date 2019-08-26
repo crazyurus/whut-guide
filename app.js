@@ -3,10 +3,12 @@ App({
     this.globalData = {};
   },
   loadFontFace() {
-    wx.loadFontFace({
-      family: '方正大标宋',
-      source: 'url(https://freshman-static-itoken-team-public-hk-01.oss-cn-hongkong.aliyuncs.com/fonts/FZCUJINLJW.woff2)'
-    });
+    if (wx.loadFontFace) {
+      wx.loadFontFace({
+        family: '方正大标宋',
+        source: 'url(https://freshman-static-itoken-team-public-hk-01.oss-cn-hongkong.aliyuncs.com/fonts/FZCUJINLJW.woff2)'
+      });
+    }
   },
   fetch(options) {
     const self = this;
