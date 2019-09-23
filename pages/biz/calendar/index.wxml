@@ -6,4 +6,4 @@
 </view>
 <image class="footer" src="/images/footer/feima.png" bindtap="feedback" />
 <button class="share save" plain="true" bindtap="save">保存到手机~</button>
-<button class="share" open-type="share" plain="true">点这儿去分享~</button>
+<button class="share" open-type="share" share-type="27" plain="true">点这儿去分享~</button>
