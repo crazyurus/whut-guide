@@ -19,7 +19,7 @@ Page({
       this.setData({
         categories,
       });
-    }, false);
+    }, !!this.data.categories);
   },
   onShareAppMessage() {
     return {};
