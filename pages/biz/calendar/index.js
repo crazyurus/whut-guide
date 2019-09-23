@@ -5,7 +5,7 @@ Page({
   data: {},
   onShareAppMessage() {
     return {
-      title: '校历',
+      title: '武汉理工大学校历',
       path: '/pages/biz/calendar/index'
     };
   },

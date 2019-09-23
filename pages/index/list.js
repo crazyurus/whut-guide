@@ -19,6 +19,9 @@ Page({
       title: options.title
     });
   },
+  onShareAppMessage() {
+    return {};
+  },
   detail(e) {
     const { id, link } = e.target.dataset;
     app.open(id ,link);
