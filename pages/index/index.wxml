@@ -12,4 +12,4 @@
     data-color="{{item.color}}"
   ></card>
 </view>
-<image class="footer" src="../../images/footer/token.png" bindtap="about" />
+<image class="footer" src="/images/footer/token.png" bindtap="about" />

@@ -2,10 +2,10 @@
   "pages": [
     "pages/index/index",
     "pages/index/list",
-    "pages/index/detail",
     "pages/common/webview",
     "pages/index/search",
-    "pages/common/calendar"
+    "pages/biz/calendar/index",
+    "pages/biz/article/detail"
   ],
   "window": {
     "backgroundColor": "#ffffff",

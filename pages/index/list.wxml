@@ -13,4 +13,4 @@
   ></card>
   <view wx:if="{{articles.length === 0 && color}}" class="empty">暂时没有内容呢</view>
 </view>
-<image class="footer" src="../../images/footer/token.png" bindtap="about" />
+<image class="footer" src="/images/footer/token.png" bindtap="about" />

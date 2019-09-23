@@ -86,7 +86,7 @@ App({
     if (link) {
       if (link === 'https://web.wutnews.net/act/calendar/index.html') {
         wx.navigateTo({
-          url: '/pages/common/calendar'
+          url: '/pages/biz/calendar/index'
         });
       }
       else if (link.indexOf('http') === 0) {
@@ -101,7 +101,7 @@ App({
       }
     } else {
       wx.navigateTo({
-        url: '/pages/index/detail?id=' + id
+        url: '/pages/biz/article/detail?id=' + id
       });
     }
   },

@@ -46,5 +46,5 @@
     </view>
   </scroll-view>
 </view>
-<image class="footer" src="../../images/footer/feima.png" bindtap="feedback" />
+<image class="footer" src="/images/footer/feima.png" bindtap="feedback" />
 <button class="share {{showShare ? '' : 'share-hidden'}}" open-type="share" plain="true">点这儿去分享~</button>

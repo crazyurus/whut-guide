@@ -22,7 +22,7 @@ Page({
   onShareAppMessage() {
     return {
       title: this.data.article.title,
-      path: '/pages/index/detail?id=' + this.data.article.id
+      path: '/pages/biz/article/detail?id=' + this.data.article.id
     };
   },
   feedback() {

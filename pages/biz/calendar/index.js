@@ -6,7 +6,7 @@ Page({
   onShareAppMessage() {
     return {
       title: '校历',
-      path: '/pages/common/calendar'
+      path: '/pages/biz/calendar/index'
     };
   },
   preview() {
