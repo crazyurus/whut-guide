@@ -7,7 +7,6 @@ Page({
     wd: ''
   },
   onLoad(options) {
-    app.loadFontFace();
     this.fetch(options.wd);
   },
   fetch(wd) {

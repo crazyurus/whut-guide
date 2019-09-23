@@ -1,6 +1,7 @@
 App({
   onLaunch() {
     this.globalData = {};
+    this.loadFontFace();
   },
   loadFontFace() {
     if (wx.loadFontFace) {

@@ -3,9 +3,6 @@ const url = 'https://web.wutnews.net/act/calendar/assets/images/calendar.jpg';
 
 Page({
   data: {},
-  onLoad(options) {
-    app.loadFontFace();
-  },
   onShareAppMessage() {
     return {
       title: '校历',

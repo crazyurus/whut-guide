@@ -6,9 +6,6 @@ Page({
   data: {
     categories
   },
-  onLoad() {
-    app.loadFontFace();
-  },
   onShareAppMessage() {
     return {};
   },

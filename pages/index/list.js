@@ -7,7 +7,6 @@ Page({
     color: ''
   },
   onLoad(options) {
-    app.loadFontFace();
     app.request.get('https://test-api-iwut.wutnews.net/api/v1/category?id=' + options.id).then(response => {
       this.setData({
         articles: response,
