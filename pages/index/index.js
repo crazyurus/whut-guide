@@ -11,7 +11,7 @@ Page({
       const categories = response.map((category, index) => {
         return {
           ...category,
-          color: colors[Math.floor(index / 2)]
+          color: colors[index > 7 ? 3 : Math.floor(index / 2)]
         }
       });
 
