@@ -11,7 +11,8 @@ Page({
   },
   onShareAppMessage() {
     return {
-      title: '搜索“' + this.data.wd + '”的结果'
+      title: '搜索“' + this.data.wd + '”的结果',
+      path: '/pages/index/search?wd=' + this.data.wd
     };
   },
   fetch(wd) {

@@ -2,6 +2,7 @@ const app = getApp()
 
 Page({
   data: {
+    id: 0,
     articles: [],
     title: '',
     color: ''
@@ -9,6 +10,7 @@ Page({
   onLoad(options) {
     app.request.get('https://test-api-iwut.wutnews.net/api/v1/category?id=' + options.id).then(response => {
       this.setData({
+        id: options.id,
         articles: response,
         title: options.title,
         color: options.color
@@ -20,7 +22,10 @@ Page({
     });
   },
   onShareAppMessage() {
-    return {};
+    return {
+      title: this.data.title,
+      path: '/pages/index/list?id=' + this.data.id
+    };
   },
   detail(e) {
     const { id, link } = e.target.dataset;
