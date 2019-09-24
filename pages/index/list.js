@@ -10,14 +10,13 @@ Page({
   onLoad(options) {
     app.request.get('https://test-api-iwut.wutnews.net/api/v1/category?id=' + options.id).then(response => {
       this.setData({
-        id: options.id,
         articles: response,
-        title: options.title,
         color: options.color
       });
     });
 
     this.setData({
+      id: options.id,
       title: options.title
     });
   },
