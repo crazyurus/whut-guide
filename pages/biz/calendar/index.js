@@ -1,4 +1,6 @@
-const app = getApp();
+import * as ui from '../../../libs/ui.js';
+import app from '../../../libs/app.js';
+
 const url = 'https://web.wutnews.net/act/calendar/assets/images/calendar.jpg';
 
 Page({
@@ -23,7 +25,7 @@ Page({
       confirmText: '保存',
       success(response) {
         if (response.cancel) return;
-        app.loading('保存中');
+        ui.loading('保存中');
 
         wx.downloadFile({
           url,
@@ -38,7 +40,7 @@ Page({
                 });
               },
               fail() {
-                app.toast('校历保存失败');
+                ui.toast('校历保存失败');
               }
             })
           },

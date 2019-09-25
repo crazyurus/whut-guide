@@ -1,4 +1,6 @@
-const app = getApp()
+import request from '../../libs/request.js';
+import * as ui from '../../libs/ui.js';
+import app from '../../libs/app';
 
 Page({
   data: {
@@ -8,7 +10,7 @@ Page({
     color: ''
   },
   onLoad(options) {
-    app.request.get('https://test-api-iwut.wutnews.net/api/v1/category?id=' + options.id).then(response => {
+    request.get('https://test-api-iwut.wutnews.net/api/v1/category?id=' + options.id).then(response => {
       this.setData({
         articles: response,
         color: options.color
@@ -28,7 +30,7 @@ Page({
   },
   detail(e) {
     const { id, link } = e.target.dataset;
-    app.open(id ,link);
+    ui.open(id ,link);
   },
   search(e) {
     wx.navigateTo({

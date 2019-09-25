@@ -1,4 +1,5 @@
-const app = getApp()
+import request from '../../libs/request.js';
+import * as ui from '../../libs/ui.js';
 
 Page({
   data: {
@@ -16,7 +17,7 @@ Page({
     };
   },
   fetch(wd) {
-    app.request.get('https://test-api-iwut.wutnews.net/api/v1/search?wd=' + wd, {
+    request.get('https://test-api-iwut.wutnews.net/api/v1/search?wd=' + wd, {
       loading: '搜索中'
     }).then(response => {
       this.setData({
@@ -30,6 +31,6 @@ Page({
   },
   detail(e) {
     const { id, link } = e.target.dataset;
-    app.open(id, link);
+    ui.open(id, link);
   },
 });
