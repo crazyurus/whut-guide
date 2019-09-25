@@ -25,26 +25,27 @@ Page({
       confirmColor: '#000',
       confirmText: '保存',
     }).then(response => {
-      if (response.cancel) return;
+      if (response.cancel) return Promise.reject();
       ui.loading('保存中');
 
       return native.downloadFile({
         url,
+      }).then(response => {
+        return native.saveImageToPhotosAlbum({
+          filePath: response.tempFilePath
+        });
+      }, () => {
+        ui.toast('校历下载失败');
+        return Promise.reject();
+      }).then(() => {
+        native.showToast({
+          title: '校历保存成功'
+        });
+      }, () => {
+        ui.toast('校历保存失败');
+      }).finally(() => {
+        native.hideLoading();
       });
-    }).then(response => {
-      const filePath = response.tempFilePath;
-
-      return native.saveImageToPhotosAlbum({
-        filePath,
-      });
-    }).then(() => {
-      native.showToast({
-        title: '校历保存成功'
-      });
-    }).catch(() => {
-      ui.toast('校历保存失败');
-    }).finally(() => {
-      native.hideLoading();
     });
   },
   feedback() {
