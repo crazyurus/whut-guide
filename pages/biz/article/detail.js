@@ -1,7 +1,8 @@
 import request from '../../../libs/request.js';
+import native from '../../../libs/native.js';
 import app from '../../../libs/app.js';
 
-const systemInfo = wx.getSystemInfoSync();
+const systemInfo = native.getSystemInfoSync();
 
 Page({
   data: {
@@ -33,26 +34,25 @@ Page({
   preview(e) {
     const { url } = e.target.dataset;
 
-    wx.showLoading({
+    native.showLoading({
       title: '打开附件中'
     });
-    wx.downloadFile({
-      url,
-      success(response) {
-        const filePath = response.tempFilePath
-        wx.openDocument({
-          filePath,
-          complete() {
-            wx.hideLoading();
-          }
-        });
-      }
+    native.downloadFile({
+      url
+    }).then(response => {
+      const filePath = response.tempFilePath;
+
+      return native.openDocument({
+        filePath,
+      });
+    }).finally(() => {
+      native.hideLoading();
     });
   },
   launch(e) {
     const { appid, path } = e.target.dataset;
 
-    wx.navigateToMiniProgram({
+    native.navigateToMiniProgram({
       appId: appid,
       path
     });
@@ -68,11 +68,11 @@ Page({
     const { name, area, longitude, latitude } = e.target.dataset;
 
    if (systemInfo.AppPlatform === 'qq') {
-     wx.navigateTo({
+     native.navigateTo({
        url: '/pages/common/webview?url=' + encodeURIComponent(`https://3gimg.qq.com/lightmap/v1/marker/index.html?marker=coord%3A${latitude}%2C${longitude}%3Btitle%3A${encodeURIComponent(name)}%3Baddr%3A${encodeURIComponent(area)}`),
      });
    } else {
-     wx.openLocation({
+     native.openLocation({
        name,
        address: area,
        latitude,

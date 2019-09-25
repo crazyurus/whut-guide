@@ -1,5 +1,6 @@
 import request from '../../libs/request.js';
 import * as ui from '../../libs/ui.js';
+import native from '../../libs/native.js';
 import app from '../../libs/app';
 
 Page({
@@ -33,7 +34,7 @@ Page({
     ui.open(id ,link);
   },
   search(e) {
-    wx.navigateTo({
+    native.navigateTo({
       url: '/pages/index/search?wd=' + e.detail.value
     });
   },

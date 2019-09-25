@@ -1,9 +1,10 @@
 import request from '../../libs/request.js';
+import native from '../../libs/native.js';
 import app from '../../libs/app.js';
 
 Page({
   data: {
-    categories: wx.getStorageSync('categories')
+    categories: native.getStorageSync('categories')
   },
   onLoad() {
     const colors = ['#3390b9', '#4fabd2', '#80c5e4', '#8cceed'];
@@ -16,7 +17,7 @@ Page({
         }
       });
 
-      wx.setStorageSync('categories', categories);
+      native.setStorageSync('categories', categories);
       this.setData({
         categories,
       });
@@ -28,12 +29,12 @@ Page({
   detail(e) {
     const { id, color, title } = e.target.dataset;
 
-    wx.navigateTo({
+    native.navigateTo({
       url: `/pages/index/list?id=${id}&color=${color}&title=${title}`
     });
   },
   search(e) {
-    wx.navigateTo({
+    native.navigateTo({
       url: '/pages/index/search?wd=' + e.detail.value
     });
   },
