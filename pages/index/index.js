@@ -4,7 +4,7 @@ import app from '../../libs/app.js';
 
 Page({
   data: {
-    categories: native.getStorageSync('categories')
+    categories: native.getStorageSync('categories') || []
   },
   onLoad() {
     const colors = ['#3390b9', '#4fabd2', '#80c5e4', '#8cceed'];
@@ -21,7 +21,9 @@ Page({
       this.setData({
         categories,
       });
-    }, !!this.data.categories);
+    }, {
+      loading: this.data.categories.length === 0
+    });
   },
   onShareAppMessage() {
     return {};

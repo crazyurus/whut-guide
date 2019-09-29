@@ -4,19 +4,21 @@ export default new Proxy(wx, {
       return undefined;
     }
 
-    return function(params) {
-      if (key.endsWith('Sync')) {
-        return target[key](params);
+    return function() {
+      const params = arguments[0];
+
+      if (typeof params === 'object' && !Array.isArray(params) && !key.endsWith('Sync')) {
+        return new Promise((resolve, reject) => {
+          target[key]({
+            ...params,
+            success: res => resolve(res),
+            fail: res => reject(res),
+            complete() {}
+          });
+        });
       }
 
-      return new Promise((resolve, reject) => {
-        target[key]({
-          ...params,
-          success: res => resolve(res),
-          fail: res => reject(res),
-          complete() {}
-        });
-      });
+      return target[key](...arguments);
     }
   }
-})
+});
