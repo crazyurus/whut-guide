@@ -4,6 +4,7 @@
   "description": "理工大指北小程序",
   "main": "app.js",
   "dependencies": {
+    "miniprogram-api-promise": "^1.0.4",
     "miniprogram-computed": "^2.0.3"
   },
   "devDependencies": {},
