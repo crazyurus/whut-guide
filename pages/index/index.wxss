@@ -1,11 +1,4 @@
 .container {
-  margin: 20rpx 40rpx;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  flex-direction: row;
-  align-content: flex-start;
+  margin: 20rpx 30rpx;
   height: calc(100% - 262rpx);
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
 }

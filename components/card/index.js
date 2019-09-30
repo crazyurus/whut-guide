@@ -3,8 +3,5 @@ Component({
     title: String,
     desc: String,
     bgColor: String
-  },
-  methods: {
-
   }
 })

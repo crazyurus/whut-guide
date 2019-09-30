@@ -1,0 +1,14 @@
+<view class="container">
+  <card
+    wx:for="{{computedItems}}"
+    wx:key="{{item.id}}"
+    data-id="{{item.id}}"
+    data-title="{{item.title}}"
+    data-link="{{item.link}}"
+    title="{{item.title}}" 
+    desc="{{item.description}}" 
+    bgColor="{{item.color}}" 
+    bindtap="detail"
+  ></card>
+  <view wx:if="{{computedItems.length === 0}}" class="empty">{{empty}}</view>
+</view>

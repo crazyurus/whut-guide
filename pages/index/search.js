@@ -17,20 +17,20 @@ Page({
     };
   },
   async fetch(wd) {
-    const response = await request.get('https://test-api-iwut.wutnews.net/api/v1/search?wd=' + wd, {
+    const articles = await request.get('https://test-api-iwut.wutnews.net/api/v1/search?wd=' + wd, {
       loading: '搜索中'
     });
-    
+
     this.setData({
-      articles: response,
-      wd: wd
+      articles,
+      wd
     });
   },
   search(e) {
     this.fetch(e.detail.value);
   },
   detail(e) {
-    const { id, link } = e.target.dataset;
+    const { id, link } = e.detail;
     ui.open(id, link);
   },
 });

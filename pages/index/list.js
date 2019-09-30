@@ -13,10 +13,10 @@ Page({
     this.setData({
       title: options.title
     });
-    
-    const response = await request.get('https://test-api-iwut.wutnews.net/api/v1/category?id=' + options.id);
+
+    const articles = await request.get('https://test-api-iwut.wutnews.net/api/v1/category?id=' + options.id);
     this.setData({
-      articles: response,
+      articles,
       color: options.color
     });
   },
@@ -27,8 +27,8 @@ Page({
     };
   },
   detail(e) {
-    const { id, link } = e.target.dataset;
-    ui.open(id ,link);
+    const { id, link } = e.detail;
+    ui.open(id, link);
   },
   search(e) {
     native.navigateTo({

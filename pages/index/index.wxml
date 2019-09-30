@@ -1,15 +1,6 @@
 <navbar title="理工大指北"></navbar>
 <searchbar bindsearch="search" />
 <view class="container">
-  <card
-    wx:for="{{categories}}"
-    wx:key="{{item.id}}"
-    title="{{item.title}}"
-    bgColor="{{item.color}}"
-    bindtap="detail" 
-    data-id="{{item.id}}"
-    data-title="{{item.title}}"
-    data-color="{{item.color}}"
-  ></card>
+  <list items="{{categories}}" bindopen="detail" />
 </view>
 <image class="footer" src="/assets/images/footer/token.png" bindtap="about" />

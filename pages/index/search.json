@@ -2,8 +2,8 @@
   "disableScroll": true,
   "usingComponents": {
     "navbar": "../../components/navbar/index",
-    "card": "../../components/card/index",
-    "searchbar": "../../components/searchbar/index"
+    "searchbar": "../../components/searchbar/index",
+    "list": "../../components/list/index"
   },
   "navigationStyle": "custom"
 }
