@@ -6,7 +6,7 @@
   align-content: flex-start;
   overflow-y: auto;
   height: 100%;
-  padding: 0 10rpx;
+  padding: 0 20rpx;
   -webkit-overflow-scrolling: touch;
 }
 
