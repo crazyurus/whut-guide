@@ -12,20 +12,20 @@ Page({
     },
     showShare: true
   },
-  onLoad(options) {
-    request.get('https://test-api-iwut.wutnews.net/api/v1/article?id=' + options.id).then(response => {
-      if (systemInfo.AppPlatform === 'qq') response.miniPrograms = response.miniPrograms.qq;
-      else response.miniPrograms = response.miniPrograms.wechat;
+  async onLoad(options) {
+    const response = await request.get('https://test-api-iwut.wutnews.net/api/v1/article?id=' + options.id);
 
-      this.setData({
-        article: response
-      });
+    if (systemInfo.AppPlatform === 'qq') response.miniPrograms = response.miniPrograms.qq;
+    else response.miniPrograms = response.miniPrograms.wechat;
+
+    this.setData({
+      article: response
     });
   },
   onShareAppMessage() {
     return {
       title: this.data.article.title,
-      path: '/pages/biz/article/detail?id=' + this.data.article.id
+      path: this.route
     };
   },
   feedback() {

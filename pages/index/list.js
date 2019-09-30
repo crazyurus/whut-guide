@@ -5,28 +5,25 @@ import app from '../../libs/app';
 
 Page({
   data: {
-    id: 0,
     articles: [],
     title: '',
     color: ''
   },
-  onLoad(options) {
-    request.get('https://test-api-iwut.wutnews.net/api/v1/category?id=' + options.id).then(response => {
-      this.setData({
-        articles: response,
-        color: options.color
-      });
-    });
-
+  async onLoad(options) {
     this.setData({
-      id: options.id,
       title: options.title
+    });
+    
+    const response = await request.get('https://test-api-iwut.wutnews.net/api/v1/category?id=' + options.id);
+    this.setData({
+      articles: response,
+      color: options.color
     });
   },
   onShareAppMessage() {
     return {
       title: this.data.title,
-      path: '/pages/index/list?id=' + this.data.id
+      path: this.route
     };
   },
   detail(e) {

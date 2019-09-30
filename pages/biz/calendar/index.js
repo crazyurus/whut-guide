@@ -9,7 +9,7 @@ Page({
   onShareAppMessage() {
     return {
       title: '武汉理工大学校历',
-      path: '/pages/biz/calendar/index'
+      path: this.route
     };
   },
   preview() {

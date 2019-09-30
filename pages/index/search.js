@@ -13,17 +13,17 @@ Page({
   onShareAppMessage() {
     return {
       title: '搜索“' + this.data.wd + '”的结果',
-      path: '/pages/index/search?wd=' + this.data.wd
+      path: this.route
     };
   },
-  fetch(wd) {
-    request.get('https://test-api-iwut.wutnews.net/api/v1/search?wd=' + wd, {
+  async fetch(wd) {
+    const response = await request.get('https://test-api-iwut.wutnews.net/api/v1/search?wd=' + wd, {
       loading: '搜索中'
-    }).then(response => {
-      this.setData({
-        articles: response,
-        wd: wd
-      });
+    });
+    
+    this.setData({
+      articles: response,
+      wd: wd
     });
   },
   search(e) {
