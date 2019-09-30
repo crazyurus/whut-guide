@@ -16,14 +16,14 @@ Page({
       path: this.route
     };
   },
-  async fetch(wd) {
-    const articles = await request.get('https://test-api-iwut.wutnews.net/api/v1/search?wd=' + wd, {
+  fetch(wd) {
+    return request.get('https://test-api-iwut.wutnews.net/api/v1/search?wd=' + wd, {
       loading: '搜索中'
-    });
-
-    this.setData({
-      articles,
-      wd
+    }).then(articles => {
+      this.setData({
+        articles,
+        wd
+      });
     });
   },
   search(e) {

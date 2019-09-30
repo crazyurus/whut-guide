@@ -13,12 +13,14 @@
 		"uglifyFileName": true,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
+		"uploadWithSourceMap": false,
 		"babelSetting": {
 			"ignore": [],
 			"disablePlugins": [],
 			"outputPath": ""
-		}
+		},
+		"sourcemapDisabled": true,
+		"remoteDebugLogEnable": false
 	},
 	"compileType": "miniprogram",
 	"createTime": 1565966901542,
@@ -35,6 +37,12 @@
 	"simulatorPluginLibVersion": {},
 	"appid": "wx6e47fc71914f0254",
 	"libVersion": "2.8.3",
+	"scripts": {
+		"beforeCompile": "",
+		"beforePreview": "",
+		"beforeUpload": ""
+	},
+	"qqLibVersion": "1.8.0",
 	"condition": {
 		"search": {
 			"current": -1,

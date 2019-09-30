@@ -9,15 +9,16 @@ Page({
     title: '',
     color: ''
   },
-  async onLoad(options) {
+  onLoad(options) {
+    const articles = request.get('https://test-api-iwut.wutnews.net/api/v1/category?id=' + options.id).then(articles => {
+      this.setData({
+        articles,
+        color: options.color
+      });
+    });
+    
     this.setData({
       title: options.title
-    });
-
-    const articles = await request.get('https://test-api-iwut.wutnews.net/api/v1/category?id=' + options.id);
-    this.setData({
-      articles,
-      color: options.color
     });
   },
   onShareAppMessage() {

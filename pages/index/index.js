@@ -6,14 +6,14 @@ Page({
   data: {
     categories: native.getStorageSync('categories') || []
   },
-  async onLoad() {
-    const categories = await request.get('https://test-api-iwut.wutnews.net/api/v1/category', {
+  onLoad() {
+    request.get('https://test-api-iwut.wutnews.net/api/v1/category', {
       loading: this.data.categories.length === 0
-    });
-  
-    native.setStorageSync('categories', categories);
-    this.setData({
-      categories,
+    }).then(categories => {
+      native.setStorageSync('categories', categories);
+      this.setData({
+        categories,
+      });
     });
   },
   onShareAppMessage() {
