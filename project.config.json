@@ -10,7 +10,7 @@
 		"coverView": true,
 		"nodeModules": true,
 		"autoAudits": true,
-		"uglifyFileName": true,
+		"uglifyFileName": false,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
@@ -20,7 +20,8 @@
 			"outputPath": ""
 		},
 		"sourcemapDisabled": true,
-		"remoteDebugLogEnable": false
+		"remoteDebugLogEnable": false,
+		"bundle": true
 	},
 	"compileType": "miniprogram",
 	"createTime": 1565966901542,
@@ -36,7 +37,7 @@
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"appid": "wx6e47fc71914f0254",
-	"libVersion": "2.8.3",
+	"libVersion": "2.9.1",
 	"scripts": {
 		"beforeCompile": "",
 		"beforePreview": "",

@@ -1,7 +1,6 @@
 {
   "disableScroll": true,
   "usingComponents": {
-    "navbar": "/components/navbar/index",
     "searchbar": "/components/searchbar/index",
     "list": "/components/list/index"
   },

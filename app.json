@@ -14,6 +14,9 @@
     "navigationBarTitleText": "理工大指北",
     "navigationBarTextStyle": "black"
   },
+  "usingComponents": {
+    "navbar": "/components/navbar/index"
+  },
   "sitemapLocation": "sitemap.json",
   "navigateToMiniProgramAppIdList": [
     "wxebadf544ddae62cb",
