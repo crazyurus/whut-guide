@@ -1,3 +1,4 @@
+import regeneratorRuntime from 'regenerator-runtime';
 import request from '../../libs/request.js';
 import * as ui from '../../libs/ui.js';
 
@@ -16,14 +17,14 @@ Page({
       path: this.route
     };
   },
-  fetch(wd) {
-    return request.get('https://test-api-iwut.wutnews.net/api/v1/search?wd=' + wd, {
+  async fetch(wd) {
+    const articles = await request.get('/search?wd=' + wd, {
       loading: '搜索中'
-    }).then(articles => {
-      this.setData({
-        articles,
-        wd
-      });
+    });
+    
+    this.setData({
+      articles,
+      wd
     });
   },
   search(e) {

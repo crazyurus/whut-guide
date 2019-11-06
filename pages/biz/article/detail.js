@@ -1,3 +1,4 @@
+import regeneratorRuntime from 'regenerator-runtime';
 import request from '../../../libs/request.js';
 import native from '../../../libs/native.js';
 import app from '../../../libs/app.js';
@@ -12,14 +13,14 @@ Page({
     },
     showShare: true
   },
-  onLoad(options) {
-    request.get('https://test-api-iwut.wutnews.net/api/v1/article?id=' + options.id).then(response => {
-      if (systemInfo.AppPlatform === 'qq') response.miniPrograms = response.miniPrograms.qq;
-      else response.miniPrograms = response.miniPrograms.wechat;
+  async onLoad(options) {
+    const response = await request.get('/article?id=' + options.id);
 
-      this.setData({
-        article: response
-      });
+    if (systemInfo.AppPlatform === 'qq') response.miniPrograms = response.miniPrograms.qq;
+    else response.miniPrograms = response.miniPrograms.wechat;
+
+    this.setData({
+      article: response
     });
   },
   onShareAppMessage() {
@@ -31,23 +32,20 @@ Page({
   feedback() {
     app.feedback();
   },
-  preview(e) {
+  async preview(e) {
     const { url } = e.target.dataset;
 
     native.showLoading({
       title: '打开附件中'
     });
-    native.downloadFile({
+    const response = await native.downloadFile({
       url
-    }).then(response => {
-      const filePath = response.tempFilePath;
-
-      return native.openDocument({
-        filePath,
-      });
-    }).finally(() => {
-      native.hideLoading();
     });
+    const filePath = response.tempFilePath;
+    const document = await native.openDocument({
+      filePath,
+    });
+    native.hideLoading();
   },
   launch(e) {
     const { appid, path } = e.target.dataset;

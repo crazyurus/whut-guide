@@ -10,7 +10,7 @@
 		"coverView": true,
 		"nodeModules": true,
 		"autoAudits": true,
-		"uglifyFileName": true,
+		"uglifyFileName": false,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
@@ -19,9 +19,9 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
+		"bundle": true,
 		"sourcemapDisabled": true,
-		"remoteDebugLogEnable": false,
-		"bundle": true
+		"remoteDebugLogEnable": false
 	},
 	"compileType": "miniprogram",
 	"createTime": 1565966901542,

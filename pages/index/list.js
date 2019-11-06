@@ -1,3 +1,4 @@
+import regeneratorRuntime from 'regenerator-runtime';
 import request from '../../libs/request.js';
 import * as ui from '../../libs/ui.js';
 import native from '../../libs/native.js';
@@ -9,16 +10,13 @@ Page({
     title: '',
     color: ''
   },
-  onLoad(options) {
-    const articles = request.get('https://test-api-iwut.wutnews.net/api/v1/category?id=' + options.id).then(articles => {
-      this.setData({
-        articles,
-        color: options.color
-      });
-    });
+  async onLoad(options) {
+    const articles = await request.get('/category?id=' + options.id);
     
     this.setData({
-      title: options.title
+      articles,
+      title: options.title,
+      color: options.color
     });
   },
   onShareAppMessage() {

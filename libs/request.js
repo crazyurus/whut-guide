@@ -1,7 +1,9 @@
 import * as ui from './ui.js';
 
+const base = 'https://test-api-iwut.wutnews.net/api/v1';
+
 function request(options) {
-  const { loading = true, ...restOptions } = options;
+  const { url, loading = true, ...restOptions } = options;
 
   return new Promise((resolve, reject) => {
     if (loading) {
@@ -9,6 +11,7 @@ function request(options) {
     }
 
     wx.request({
+      url: base + url,
       success(response) {
         if (
           response.statusCode === 200 &&

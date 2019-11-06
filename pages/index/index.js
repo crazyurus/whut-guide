@@ -1,3 +1,4 @@
+import regeneratorRuntime from 'regenerator-runtime';
 import request from '../../libs/request.js';
 import native from '../../libs/native.js';
 import app from '../../libs/app.js';
@@ -6,14 +7,14 @@ Page({
   data: {
     categories: native.getStorageSync('categories') || []
   },
-  onLoad() {
-    request.get('https://test-api-iwut.wutnews.net/api/v1/category', {
+  async onLoad() {
+    const categories = await request.get('/category', {
       loading: this.data.categories.length === 0
-    }).then(categories => {
-      native.setStorageSync('categories', categories);
-      this.setData({
-        categories,
-      });
+    });
+
+    native.setStorageSync('categories', categories);
+    this.setData({
+      categories,
     });
   },
   onShareAppMessage() {
