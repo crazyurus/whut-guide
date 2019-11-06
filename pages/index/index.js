@@ -22,9 +22,11 @@ Page({
   detail(e) {
     const { id, title } = e.detail;
 
-    native.navigateTo({
-      url: `/pages/index/list?id=${id}&title=${title}`
-    });
+    setTimeout(() => {
+      native.navigateTo({
+        url: `/pages/index/list?id=${id}&title=${title}`
+      });
+    }, 200);
   },
   search(e) {
     native.navigateTo({

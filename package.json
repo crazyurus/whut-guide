@@ -1,6 +1,6 @@
 {
   "name": "guide",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "理工大指北小程序",
   "main": "app.js",
   "dependencies": {
@@ -11,7 +11,7 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "https://gogs.itoken.team/crazyurus/student-guide.git"
+    "url": "git@git.weixin.qq.com:wx_wx6e47fc71914f0254/guide.git"
   },
   "author": "廖星 <liaoxing.lx@bytedance.com>"
 }

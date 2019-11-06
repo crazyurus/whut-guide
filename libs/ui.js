@@ -13,25 +13,27 @@ export function loading(title) {
 };
 
 export function open(id, link) {
-  if (link) {
-    if (link === 'https://web.wutnews.net/act/calendar/index.html') {
+  setTimeout(() => {
+    if (link) {
+      if (link === 'https://web.wutnews.net/act/calendar/index.html') {
+        wx.navigateTo({
+          url: '/pages/biz/calendar/index'
+        });
+      }
+      else if (link.indexOf('http') === 0) {
+        wx.navigateTo({
+          url: '/pages/common/webview?url=' + encodeURIComponent(link)
+        });
+      }
+      else {
+        wx.navigateTo({
+          url: link
+        });
+      }
+    } else {
       wx.navigateTo({
-        url: '/pages/biz/calendar/index'
+        url: '/pages/biz/article/detail?id=' + id
       });
     }
-    else if (link.indexOf('http') === 0) {
-      wx.navigateTo({
-        url: '/pages/common/webview?url=' + encodeURIComponent(link)
-      });
-    }
-    else {
-      wx.navigateTo({
-        url: link
-      });
-    }
-  } else {
-    wx.navigateTo({
-      url: '/pages/biz/article/detail?id=' + id
-    });
-  }
+  }, 200);
 }

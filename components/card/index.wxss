@@ -5,10 +5,11 @@
   font-size: 20px;
   box-shadow: 0 0 16rpx #666;
   display: flex;
+  transition: all .2s;
 }
 
-.card-hover {
-  opacity: 0.8;
+.card:active {
+  transform: scale(.95)
 }
 
 .card-title {
