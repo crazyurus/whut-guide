@@ -2,7 +2,7 @@ import regeneratorRuntime from 'regenerator-runtime';
 import request from '../../../libs/request.js';
 import native from '../../../libs/native.js';
 import app from '../../../libs/app.js';
-import { getPagePath } from '../../../libs/utils.js';
+import { getPagePath, openUrl } from '../../../libs/utils.js';
 
 const systemInfo = native.getSystemInfoSync();
 
@@ -67,9 +67,7 @@ Page({
     const { name, area, longitude, latitude } = e.target.dataset;
 
    if (systemInfo.AppPlatform === 'qq') {
-     native.navigateTo({
-       url: '/pages/common/webview?url=' + encodeURIComponent(`https://3gimg.qq.com/lightmap/v1/marker/index.html?marker=coord%3A${latitude}%2C${longitude}%3Btitle%3A${encodeURIComponent(name)}%3Baddr%3A${encodeURIComponent(area)}`),
-     });
+     openUrl(`https://3gimg.qq.com/lightmap/v1/marker/index.html?marker=coord%3A${latitude}%2C${longitude}%3Btitle%3A${encodeURIComponent(name)}%3Baddr%3A${encodeURIComponent(area)}`);
    } else {
      native.openLocation({
        name,

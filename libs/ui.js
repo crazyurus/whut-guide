@@ -1,3 +1,5 @@
+import { openUrl } from './utils.js';
+
 export function toast(message) {
   wx.showToast({
     title: message,
@@ -21,9 +23,7 @@ export function open(id, link) {
         });
       }
       else if (link.indexOf('http') === 0) {
-        wx.navigateTo({
-          url: '/pages/common/webview?url=' + encodeURIComponent(link)
-        });
+        openUrl(link);
       }
       else {
         wx.navigateTo({

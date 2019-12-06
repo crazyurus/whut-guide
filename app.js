@@ -1,4 +1,5 @@
 import native from './libs/native.js';
+import { openUrl } from './libs/utils.js';
 
 App({
   onLaunch() {
@@ -26,9 +27,7 @@ App({
 
     if (systemInfo.AppPlatform === 'qq') {
       const wj = 'https://wj.qq.com/s2/4309434/95ba';
-      native.navigateTo({
-        url: '/pages/common/webview?url=' + encodeURIComponent(wj)
-      });
+      openUrl(wj);
     } else {
       native.navigateToMiniProgram({
         appId: 'wxebadf544ddae62cb',
