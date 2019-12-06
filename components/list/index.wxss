@@ -10,6 +10,10 @@
   -webkit-overflow-scrolling: touch;
 }
 
+.container::-webkit-scrollbar {
+  display: none;
+}
+
 .empty {
   font-size: 20px;
   height: 100%;

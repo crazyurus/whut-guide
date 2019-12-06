@@ -9,7 +9,7 @@ App({
     if (native.loadFontFace) {
       native.loadFontFace({
         family: '方正大标宋',
-        source: 'url(https://freshman-static-itoken-team-public-hk-01.oss-cn-hongkong.aliyuncs.com/fonts/FZCUJINLJW.woff2)'
+        source: 'url(https://sf1-ttcdn-tos.pstatp.com/obj/larkdeveloper/FZCUJINLJW.woff2)'
       });
     }
   },

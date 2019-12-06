@@ -3,12 +3,12 @@ import request from '../../libs/request.js';
 import * as ui from '../../libs/ui.js';
 import native from '../../libs/native.js';
 import app from '../../libs/app';
+import { getPagePath } from '../../libs/utils.js';
 
 Page({
   data: {
     articles: [],
     title: '',
-    color: ''
   },
   async onLoad(options) {
     const articles = await request.get('/category?id=' + options.id);
@@ -16,13 +16,12 @@ Page({
     this.setData({
       articles,
       title: options.title,
-      color: options.color
     });
   },
   onShareAppMessage() {
     return {
       title: this.data.title,
-      path: this.route
+      path: getPagePath(this),
     };
   },
   detail(e) {

@@ -1,6 +1,7 @@
 import regeneratorRuntime from 'regenerator-runtime';
 import request from '../../libs/request.js';
 import * as ui from '../../libs/ui.js';
+import { getPagePath } from '../../libs/utils.js';
 
 Page({
   data: {
@@ -14,7 +15,7 @@ Page({
   onShareAppMessage() {
     return {
       title: '搜索“' + this.data.wd + '”的结果',
-      path: this.route
+      path: getPagePath(this),
     };
   },
   async fetch(wd) {

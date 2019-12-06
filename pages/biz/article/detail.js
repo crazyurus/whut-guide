@@ -2,6 +2,7 @@ import regeneratorRuntime from 'regenerator-runtime';
 import request from '../../../libs/request.js';
 import native from '../../../libs/native.js';
 import app from '../../../libs/app.js';
+import { getPagePath } from '../../../libs/utils.js';
 
 const systemInfo = native.getSystemInfoSync();
 
@@ -26,7 +27,7 @@ Page({
   onShareAppMessage() {
     return {
       title: this.data.article.title,
-      path: this.route
+      path: getPagePath(this),
     };
   },
   feedback() {
