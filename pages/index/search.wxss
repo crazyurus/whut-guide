@@ -2,3 +2,7 @@
   margin: 20rpx;
   height: calc(100% - 210rpx);
 }
+
+.blank {
+  height: 68rpx;
+}

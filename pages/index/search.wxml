@@ -2,4 +2,5 @@
 <searchbar defaultValue="{{wd}}" bindsearch="search" />
 <view class="container">
   <list items="{{articles}}" empty="没找到呢，试试其它关键词" bindopen="detail" />
+  <view class="blank" />
 </view>

@@ -6,7 +6,6 @@ import { getPagePath } from '../../libs/utils.js';
 Page({
   data: {
     articles: [],
-    color: '#3390b9',
     wd: ''
   },
   onLoad(options) {
