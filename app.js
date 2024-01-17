@@ -17,7 +17,7 @@ App({
   about() {
     native.showModal({
       title: '理工大指北',
-      content: 'Token团队出品\n产品：曹峻玮 陈骁驰\n设计：许亚婷\n开发：廖星 李劲巍 刘福鑫',
+      content: 'Token团队出品',
       showCancel: false,
       confirmColor: '#000'
     });

@@ -1,18 +1,17 @@
 {
-  "name": "guide",
+  "name": "whut-guide",
   "version": "1.0.8",
   "description": "理工大指北小程序",
   "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crazyurus/whut-guide"
+  },
+  "author": "Crazy Urus <crazyurus@vip.qq.com>",
   "dependencies": {
     "miniprogram-api-promise": "^1.0.4",
     "miniprogram-computed": "^2.1.1",
     "regenerator-runtime": "^0.13.1"
   },
-  "devDependencies": {},
-  "scripts": {},
-  "repository": {
-    "type": "git",
-    "url": "git@git.weixin.qq.com:wx_wx6e47fc71914f0254/guide.git"
-  },
-  "author": "廖星 <liaoxing.lx@bytedance.com>"
+  "devDependencies": {}
 }
